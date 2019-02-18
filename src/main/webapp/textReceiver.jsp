@@ -27,6 +27,9 @@
             out.println("waddupski");
         }
     %>
-
+ <form action="${pageContext.request.contextPath}/test" method="post">
+     ID: <input type="text" name="Name"/>
+     <input type="submit" value="Enter"/>
+ </form>
     </body>
 </html>
