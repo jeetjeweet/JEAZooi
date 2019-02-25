@@ -1,13 +1,15 @@
 package dao;
 
+import interceptor.SimpleInterceptor;
 import model.Person;
-
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
+@Interceptors(SimpleInterceptor.class)
 public class PersonDAO {
 
     @PersistenceContext
